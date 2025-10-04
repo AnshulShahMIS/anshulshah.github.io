@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Anshul Shah - MIS Master's Student & Cybersecurity Professional specializing in security operations, threat detection, and cloud security.">
+    <meta name="author" content="Anshul Shah">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anshul Shah - Cybersecurity Professional">
+    <meta property="og:description" content="Portfolio showcasing cybersecurity projects, security operations experience, and technical expertise.">
+    <meta property="og:url" content="https://anshulshahmis.wixsite.com/mysite">
+    
+    <title>Anshul Shah - Cybersecurity Professional</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Anshul Shah",
+      "jobTitle": "MIS Master's Student & Cybersecurity Professional",
+      "url": "https://anshulshahmis.wixsite.com/mysite",
+      "sameAs": [
+        "https://www.linkedin.com/in/anshulshah5"
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #0F3D5E;
+            --accent: #E7A33E;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --bg: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border: #e0e0e0;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --max-width: 1100px;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #4A90E2;
+                --accent: #F4C542;
+                --text: #e0e0e0;
+                --text-light: #b0b0b0;
+                --bg: #1a1a1a;
+                --bg-secondary: #2a2a2a;
+                --border: #404040;
+                --shadow: rgba(255, 255, 255, 0.05);
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5a7e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .role {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .tagline {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        section {
+            margin: 60px 0;
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            color: var(--primary);
+            margin-bottom: 32px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .about-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            max-width: 800px;
+        }
+        
+        .about-content p {
+            margin-bottom: 16px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 8px 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-list li::before {
+            content: '▸';
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+        
+        .project-card:focus-within {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        
+        .project-image.security {
+            background: linear-gradient(135deg, #0F3D5E 0%, #2a5a7e 100%);
+        }
+        
+        .project-image.cloud {
+            background: linear-gradient(135deg, #FF9900 0%, #ffb347 100%);
+        }
+        
+        .project-image.network {
+            background: linear-gradient(135deg, #4A90E2 0%, #63a4ff 100%);
+        }
+        
+        .project-image.automation {
+            background: linear-gradient(135deg, #E7A33E 0%, #ffc266 100%);
+        }
+        
+        .project-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        
+        .project-card p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .tag {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .impact {
+            background: var(--bg);
+            border-left: 4px solid var(--accent);
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        
+        .experience-timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 32px;
+        }
+        
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--border);
+        }
+        
+        .experience-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--bg);
+            box-shadow: 0 0 0 3px var(--border);
+        }
+        
+        .experience-header {
+            margin-bottom: 12px;
+        }
+        
+        .experience-header h3 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin-bottom: 4px;
+        }
+        
+        .experience-meta {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .experience-description ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .experience-description li {
+            padding: 8px 0;
+            color: var(--text-light);
+            display: flex;
+            gap: 12px;
+        }
+        
+        .experience-description li::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-content {
+            background: var(--bg-secondary);
+            padding: 48px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .contact-link:hover,
+        .contact-link:focus {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        
+        footer {
+            background: var(--bg-secondary);
+            padding: 32px 20px;
+            text-align: center;
+            color: var(--text-light);
+            margin-top: 80px;
+            border-top: 1px solid var(--border);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 20px;
+            }
+            
+            section {
+                margin: 40px 0;
+            }
+            
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
+                padding: 32px 24px;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .experience-timeline {
+                padding-left: 30px;
+            }
+            
+            .experience-item::before {
+                left: -36px;
+            }
+            
+            .experience-meta {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header role="banner">
+        <div class="header-content">
+            <h1>Anshul Shah</h1>
+            <p class="role">Cybersecurity Professional | MIS Master's Student</p>
+            <p class="tagline">Specializing in security operations, threat detection, and cloud security with hands-on experience in SIEM tools, network analysis, and vulnerability management.</p>
+        </div>
+    </header>
+    
+    <main id="main" role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <div class="about-content">
+                <p>I'm a cybersecurity professional pursuing my Master's in Management Information Systems at the University of Arizona. With experience as a Security Operations Intern at Workato, I've developed expertise in monitoring SIEM alerts, building security dashboards, and automating threat detection workflows.</p>
+                <p>My hands-on experience includes implementing cybersecurity frameworks, conducting risk assessments with FAIR-U, configuring Active Directory in virtualized environments, and analyzing network traffic with Wireshark. I combine technical security skills with cloud expertise (AWS IAM, load balancers) and scripting capabilities (Python, SQL) to build comprehensive security solutions.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Security Operations</h3>
+                    <ul class="skill-list">
+                        <li>SIEM Tools & Alert Triage</li>
+                        <li>Threat Detection & Response</li>
+                        <li>Vulnerability Management</li>
+                        <li>Security Documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>Network Analysis (Wireshark)</li>
+                        <li>Cloud Security (AWS)</li>
+                        <li>Python & SQL</li>
+                        <li>Active Directory</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul class="skill-list">
+                        <li>Sigma Dashboards</li>
+                        <li>Oracle SQL Developer</li>
+                        <li>Machine Learning</li>
+                        <li>Gemini AI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Key Projects & Achievements</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image security" role="img" aria-label="SIEM Security Operations project">
+                        <span>🛡️</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>SIEM Security Operations</h3>
+                        <p>Monitored and triaged 20–50 SIEM alerts weekly at Workato, resolving Tier 1 incidents and documenting response actions to support the security team's incident management process.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> Reduced escalation workload for senior security team members through effective initial triage and documentation
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">SIEM</span>
+                            <span class="tag">Threat Detection</span>
+                            <span class="tag">Incident Response</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image automation" role="img" aria-label="Security Dashboard Development project">
+                        <span>📊</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Security Analytics Dashboard</h3>
+                        <p>Designed and deployed 5+ Sigma dashboards leveraging Product Security Portal data, enabling real-time tracking of security bugs and issue trends for improved decision-making.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> Cut report preparation time by 30%, streamlining security team workflows and enhancing visibility into security posture
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Sigma</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Security Metrics</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image cloud" role="img" aria-label="Automated Threat Detection project">
+                        <span>⚡</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Automated Vulnerability Detection</h3>
+                        <p>Built an automated Genie notification system that flagged vulnerabilities from external sources in real-time, enhancing the team's ability to respond to emerging threats quickly.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> Reduced detection-to-response lag by 10%, improving overall security response time and threat mitigation
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Automation</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Vulnerability Management</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image network" role="img" aria-label="Network Security Analysis project">
+                        <span>🔍</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Traffic Analysis</h3>
+                        <p>Conducted comprehensive packet analysis using Wireshark to capture and evaluate network traffic patterns, identifying potential security anomalies and protocol vulnerabilities.</p>
+                        <div class="impact">
+                            <strong>Skills Applied:</strong> Network protocols, packet inspection, traffic pattern analysis, security anomaly detection
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Wireshark</span>
+                            <span class="tag">Network Security</span>
+                            <span class="tag">Traffic Analysis</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image security" role="img" aria-label="Cloud Security Implementation project">
+                        <span>☁️</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Cloud Security & IAM</h3>
+                        <p>Deployed AWS IAM policies, configured static websites with security best practices, and implemented load balancers to ensure secure and scalable cloud infrastructure.</p>
+                        <div class="impact">
+                            <strong>Skills Applied:</strong> AWS IAM, cloud security architecture, access control policies, infrastructure security
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">IAM</span>
+                            <span class="tag">Cloud Security</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image automation" role="img" aria-label="Risk Assessment Framework project">
+                        <span>📋</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Risk Assessment & Active Directory</h3>
+                        <p>Applied cybersecurity frameworks through academic projects including risk assessments with FAIR-U and Active Directory configuration in virtualized environments.</p>
+                        <div class="impact">
+                            <strong>Skills Applied:</strong> FAIR-U framework, risk quantification, Active Directory, security policy implementation
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">FAIR-U</span>
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">Risk Assessment</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>AI Solutions Intern</h3>
+                        <div class="experience-meta">
+                            <span>Workato</span>
+                            <span>•</span>
+                            <span>Aug 2025 - Present</span>
+                            <span>•</span>
+                            <span>Palo Alto, CA</span>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        <p>Currently contributing to AI-driven solutions and security operations initiatives at Workato.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Security Operations Intern</h3>
+                        <div class="experience-meta">
+                            <span>Workato</span>
+                            <span>•</span>
+                            <span>Mar 2025 - Jul 2025</span>
+                            <span>•</span>
+                            <span>Palo Alto, CA</span>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Monitored and triaged 20–50 SIEM alerts weekly, resolving Tier 1 incidents and documenting response actions, reducing escalation workload</li>
+                            <li>Designed 5+ Sigma dashboards leveraging Product Security Portal data, cutting report prep time by 30%</li>
+                            <li>Conducted QA testing of 100+ enterprise search queries in Workato GO, improving search accuracy by 20%</li>
+                            <li>Built automated Genie notification system for real-time vulnerability flagging, reducing detection-to-response lag by 10%</li>
+                            <li>Redesigned team's Jira Confluence space, streamlining document access and reducing search time by 30%</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Product Marketing Intern</h3>
+                        <div class="experience-meta">
+                            <span>Workato</span>
+                            <span>•</span>
+                            <span>May 2020 - Jul 2020</span>
+                            <span>•</span>
+                            <span>Mountain View, CA</span>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Collaborated with 5-person team to produce 3+ customer story campaigns for 3,000+ potential customers</li>
+                            <li>Peer-reviewed scripts and edited customer story videos in Adobe Premiere Pro, driving hundreds of views</li>
+                            <li>Standardized tone and branding across video assets, boosting viewer retention by 10%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in Touch</h2>
+            <div class="contact-content">
+                <p class="about-content">I'm actively exploring cybersecurity analyst opportunities and always interested in discussing security operations, threat detection, and cloud security. Let's connect!</p>
+                <div class="contact-links">
+                    <a href="mailto:mail4anshul@gmail.com" class="contact-link">
+                        <span>📧</span>
+                        Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/anshulshah5" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <span>💼</span>
+                        LinkedIn
+                    </a>
+                    <a href="https://anshulshahmis.wixsite.com/mysite" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <span>🌐</span>
+                        Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer role="contentinfo">
+        <p>&copy; 2025 Anshul Shah. Cybersecurity Professional | Eagle Scout | Zipperman Scholar</p>
+    </footer>
+</body>
+</html>
